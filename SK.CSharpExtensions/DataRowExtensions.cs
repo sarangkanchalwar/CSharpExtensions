@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
 
 namespace SK.CSharpExtensions
 {
@@ -10,12 +7,12 @@ namespace SK.CSharpExtensions
     {
         public static int GetInt(this DataRow row, string parameter)
         {
-            return row[parameter] is DBNull ? 0 : Convert.ToInt32((double)row[parameter]);
+            return row[parameter] is DBNull ? 0 : Convert.ToInt32(row[parameter]);
         }
 
         public static int GetInt(this DataRow row, int parameter)
         {
-            return row[parameter] is DBNull ? 0 : Convert.ToInt32((double)row[parameter]);
+            return row[parameter] is DBNull ? 0 : Convert.ToInt32(row[parameter]);
         }
 
         public static string GetString(this DataRow row, string parameter)
