@@ -24,7 +24,7 @@ namespace SK.CSharpExtensions
             }
         }
 
-        public static string TitleCaseToHumanReadableString(this string text)
+        public static string CamelCaseToHumanReadableString(this string text)
         {
             var regex = new Regex(@"
                 (?<=[A-Z])(?=[A-Z][a-z]) |
@@ -35,7 +35,9 @@ namespace SK.CSharpExtensions
 
         public static string ToCleanString(this string stringValue)
         {
-            var cleanString = stringValue.Trim().Replace("\n", "");
+            var cleanString = stringValue.Trim()
+                .Replace("\r\n", "")
+                .Replace("\n", "");
             do
             {
                 cleanString = cleanString.Replace("  ", " ");
