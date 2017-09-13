@@ -37,8 +37,8 @@ namespace SK.CSharpExtensions
                 inputStream.CopyTo(fs);
             }
 
-            inputStream.Close();
             inputStream.Flush();
+            inputStream.Close();
         }        
     }
 }
