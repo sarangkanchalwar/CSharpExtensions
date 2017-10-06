@@ -44,5 +44,11 @@ namespace SK.CSharpExtensions
             } while (cleanString.Contains("  "));
             return cleanString;
         }
+
+        public static string Truncate(this string text, int maxCharLength, string suffixString = "...") 
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            return text.Length <= maxCharLength ? text : $"{text.Substring(0, maxCharLength)}{suffixString}";
+        }
     }
 }

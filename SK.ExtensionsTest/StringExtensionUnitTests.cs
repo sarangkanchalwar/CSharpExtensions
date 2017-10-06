@@ -86,5 +86,45 @@ namespace SK.ExtensionsTest
             Assert.AreEqual("This is a sample test string Another line of text.", result);
         }
 
+        [TestMethod]
+        public void TruncateTest1()
+        {
+            string str = "This is a sample test string. Another line of text.";
+            var result = str.Truncate(20);
+            Assert.AreEqual("This is a sample tes...", result);
+        }
+
+        [TestMethod]
+        public void TruncateTest2()
+        {
+            string str = "This is a sample test string. Another line of text.";
+            var result = str.Truncate(20, "... Read more");
+            Assert.AreEqual("This is a sample tes... Read more", result);
+        }
+
+        [TestMethod]
+        public void TruncateTest3()
+        {
+            string str = "";
+            var result = str.Truncate(20);
+            Assert.AreEqual("", result);
+        }
+
+        [TestMethod]
+        public void TruncateTest4()
+        {
+            string str = null;
+            var result = str.Truncate(20);
+            Assert.AreEqual(null, result);
+        }
+
+        [TestMethod]
+        public void TruncateTest5()
+        {
+            string str = "Test";
+            var result = str.Truncate(5);
+            Assert.AreEqual("Test", result);
+        }
+
     }
 }
