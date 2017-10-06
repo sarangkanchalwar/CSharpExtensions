@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SK.CSharpExtensions</id>
+    <version>1.0.0</version>
+    <title>C Sharp Extensions</title>
+    <authors>Sarang Kanchalwar</authors>
+    <owners>Sarang Kanchalwar</owners>
+    <licenseUrl>https://github.com/sarangkanchalwar/CSharpExtensions/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/sarangkanchalwar/CSharpExtensions</projectUrl>
+	<iconUrl>https://cdn.onlinewebfonts.com/svg/img_102033.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>	
+    <description>This package provides various useful C Sharp extensions methods.</description>
+    <releaseNotes>Initial package publish.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+	<language>en-US</language>
+    <tags>StringExtensions StreamExtensions ListExtensions DataRowExtensions Extension Methods</tags>
+  </metadata>
+</package>
